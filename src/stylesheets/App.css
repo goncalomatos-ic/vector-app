@@ -37,6 +37,12 @@ textarea {
   display: inline-block;
 }
 
+.CardImg{
+  background: transparent url("https://media.giphy.com/media/3y0oCOkdKKRi0/giphy.gif") no-repeat scroll center center;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+}
+
 .CardImgOverlay{
   width: 50%;
   height: 50%;
