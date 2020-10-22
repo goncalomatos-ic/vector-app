@@ -12,7 +12,7 @@ class CardsRow extends React.Component {
     }
 
     return (
-      <div>
+      <div className="CardRow">
         {items}
       </div>
     );

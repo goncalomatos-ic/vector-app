@@ -25,7 +25,7 @@ class CardsList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="CardList">
         {this.getCardRows()}
       </div>
     );

@@ -19,6 +19,7 @@
 .inputJsonDiv {
   float: left;
   margin-left: 5vh;
+  height: 100vh;
 }
 
 .imageRowsDiv{
@@ -30,4 +31,16 @@ textarea {
   width: 25vw;
   overflow-y: auto;
   word-wrap:break-word;
+}
+
+.Card{
+  display: inline-block;
+}
+
+.CardRow{
+  display: inline-block;
+}
+
+.CardList{
+  display: inline;
 }
