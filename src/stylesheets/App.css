@@ -37,6 +37,23 @@ textarea {
   display: inline-block;
 }
 
+.CardImgOverlay{
+  width: 50%;
+  height: 50%;
+  margin-top: 25vh;
+}
+
+.CardImgOverlayDiv{
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  display: none;
+  position: fixed;
+}
+
 .CardRow{
   display: inline-block;
 }
