@@ -1,5 +1,7 @@
 import React from 'react';
-import './App.css';
+import '../stylesheets/App.css';
+import InputJson from './InputJson'
+import CardsList from './CardsList'
 
 class App extends React.Component {
   getContent(){
@@ -16,17 +18,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="inputJsonDiv">
-          <div>
-            <textarea defaultValue={this.getContent()}/>
-          </div>
-          <div>
-            <input type="submit" value="Save" />
-          </div>
+          <InputJson content={this.getContent()}/>
         </div>
         <div className="imageRowsDiv">
-          <img src="https://i.imgur.com/Vvhvljv.gif" alt="Nicolas Cage"></img>
-          <img src="https://i.imgur.com/Vvhvljv.gif" alt="Nicolas Cage"></img>
-          <img src="https://i.imgur.com/Vvhvljv.gif" alt="Nicolas Cage"></img>
+          <CardsList content={this.getContent()}/>
         </div>
       </div>
     );
