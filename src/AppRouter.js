@@ -1,5 +1,6 @@
 import React from 'react';
-import App from './App'
+import App from './App';
+import logo from './vector-logo.svg';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,11 +12,13 @@ function AppRouter() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <Link to="/">Home</Link>
-          </ul>
-        </nav>
+        <Link to="/">
+        <div className="App">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+          </header>
+        </div>
+        </Link>
 
         <Switch>
           <Route path="/">
