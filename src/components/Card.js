@@ -33,9 +33,9 @@ class InputJson extends React.Component {
     return (
       <div className="Card">
         <h4>{this.props.info.title}</h4>
-        <img class="CardImg" src={gif_list[this.props.info.position]} title="Hey Test" alt="Nicolas Cage" onClick={() => on(this.props.info.position)}></img>
+        <img class="CardImg" src={gif_list[this.props.info.position]} title="Hey Test" alt="The Office" onClick={() => on(this.props.info.position)}></img>
         <div className="CardImgOverlayDiv" id={this.props.info.position}>
-          <img className="CardImgOverlay" src={gif_list[this.props.info.position]} alt="Nicolas Cage"></img>
+          <img className="CardImgOverlay" src={gif_list[this.props.info.position]} alt="The Office"></img>
         </div>
       </div>
     );

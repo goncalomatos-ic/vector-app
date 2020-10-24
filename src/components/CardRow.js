@@ -11,10 +11,10 @@ const reorder = (list, startIndex, endIndex) => {
 };
 
 const getListStyle = isDraggingOver => ({
-  background: isDraggingOver ? 'lightblue' : 'lightgrey',
+  background: isDraggingOver ? 'lightblue' : 'none',
   display: 'flex',
-  padding: 8,
   overflow: 'auto',
+  width: '70vw',
 });
 
 class CardsRow extends React.Component {
