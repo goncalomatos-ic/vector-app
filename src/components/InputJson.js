@@ -5,10 +5,10 @@ class InputJson extends React.Component {
     return (
       <div>
         <div>
-          <textarea defaultValue={this.props.content}/>
+          <textarea id="inputJsonTextArea" defaultValue={this.props.content}/>
         </div>
         <div>
-          <input type="submit" value="Save" />
+          <input type="submit" value="Save" onClick={this.props.onClickChild}/>
         </div>
     </div>
     );
