@@ -7,6 +7,13 @@ RUN yarn
 COPY . ./
 RUN yarn build
 
+FROM nginx:1.12-alpine
+COPY --from=build-deps /usr/src/app/build /usr/share/nginx/html
+ENV API_ENDPOINT="http://vector-api:8000"
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+
+
 #FROM nginx:1.12-alpine
 #ENV API_ENDPOINT=http://vector-api:8000
 #COPY --from=build-deps /usr/src/app/build /usr/share/nginx/html
@@ -19,8 +26,3 @@ RUN yarn build
 #COPY nginx-entrypoint.sh /
 #COPY --from=builder /app/dist ./
 #ENTRYPOINT [ "sh", "/nginx-entrypoint.sh" ]
-
-FROM nginx:1.12-alpine
-COPY --from=build-deps /usr/src/app/build /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
