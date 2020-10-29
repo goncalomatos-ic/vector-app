@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`${process.env.API_ENDPOINT}/cards`)
+    axios.get(`http://127.0.0.1:8000/cards`)
     .then(res => {
       document.getElementById("inputJsonTextArea").value = JSON.stringify(res.data)
       this.setState({
@@ -31,7 +31,7 @@ class App extends React.Component {
     let data = document.getElementById("inputJsonTextArea").value
     data = JSON.parse(data.replace(/\s/g, ""))
 
-    axios.patch(`${process.env.API_ENDPOINT}/cards`, { data })
+    axios.patch(`http://127.0.0.1:8000/cards`, { data })
     .then(res => {
         this.setState({
           isLoaded: true,
