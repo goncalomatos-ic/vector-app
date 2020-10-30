@@ -12,6 +12,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+To test the app, post text in the following JSON format
+
+```
+JSON example:
+
+[{"type": "bank-draft", "title": "Bank Draft", "position": 0},
+ {"type": "bill-of-lading", "title": "Bill of Lading", "position": 1 }, 
+ ...]
+```
+
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.<br />
